@@ -1,0 +1,32 @@
+{
+    "manifest_version": 2,
+    "name": "Shipay_Ops",
+    "version": "1.0",
+    "description": "Gera e preenche um CNPJ válido em campos específicos em sites .shipay.com.br",
+    "permissions": [
+      "activeTab"
+    ],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://*.shipay.com.br/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "browser_action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "img/16.png",
+        "48": "img/48.png",
+        "96": "img/96.png",
+        "128": "img/128.png"
+      }
+    },
+    "icons": {
+      "48": "img/48.png"
+    }
+  }
+  
